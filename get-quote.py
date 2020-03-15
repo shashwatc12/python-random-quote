@@ -1,9 +1,12 @@
+import random
+
 def RunMyCode():
-     f = open("quotes.txt")
-     quotes = f.readlines()
+     f = open("quotes.txt") #read the file
+     quotes = f.readlines() #read the lines from file into array
      f.close()
-     print(quotes)
-     print("These are the quotes")
+     last =len(quotes) -1 
+     rnd = random.randint(0, last) #get the random number
+     print(quotes[rnd])
 
 if __name__== "__main__":
   RunMyCode()
